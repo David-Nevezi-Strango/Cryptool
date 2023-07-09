@@ -1,0 +1,47 @@
+---------------------RC4-----------------------
+python main.py -e --rc4 -m "alabala" -k "hehe"
+
+python main.py -d --rc4 -m "0f80f7f8ace0d0" -k "hehe"
+
+python .\main.py -g --rc4
+
+---------------------DES-----------------------
+python .\main.py -e --des -m 123456ABCD132536 -k AABB09182736CCDD
+
+python .\main.py -d --des -m 3201337c3a38828183b832bf31383339 -k AABB09182736CCDD
+
+python .\main.py -g --des
+
+------------------TDES-EDE---------------------
+python .\main.py -e --tdes -m 123456ABCD132536 -k ABCDEFGHIJKLMNOPQRSTUVWXxwvutsrqponmlkjihgfedcba
+
+python .\main.py -d --tdes -m 3102333435364142437431bb32373336 -k ABCDEFGHIJKLMNOPQRSTUVWXxwvutsrqponmlkjihgfedcba
+
+python .\main.py -g --tdes
+
+---------------------RSA-----------------------
+python .\main.py -e -r -k .\key.txt -m "abcd" 
+
+python .\main.py -d -r -k .\key.txt -m "𐜣容꿃픐"
+
+python .\main.py -g --rsa -o ./keys.txt
+
+-------------------SHA-256---------------------
+python .\main.py -ha --sha256 -m .\text.txt
+
+--------------------BIFID----------------------
+python .\main.py -e -b -m "this is english" -k run
+
+python .\main.py -d -b -m "QLLCELMUPQMPO" -k run
+
+------------------POLYBIUS---------------------
+python .\main.py -e -p -m "this is english"
+
+python .\main.py -d -p -m "44232443 2443 15332231244323"
+
+--------------------CESAER---------------------
+python .\main.py -a -c -m "uif bjn pg uijt sfqpsu jt up eftdsjcf boe bttftt uif mfjtvsf"
+
+python .\main.py -e -c -m mammal -k 3
+
+python .\main.py -a -c -m pdppdo
